@@ -23,7 +23,7 @@ Page({
     prevVideoId:0,
     curr_id:0,
     playTime: '',
-    jiazai:'正在拼命加载',
+    jiazai:'下拉加载更多',
     shenstatus: 0
   },
   onReady: function () {  //创建视频上下文对象

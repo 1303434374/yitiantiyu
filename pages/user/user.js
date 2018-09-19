@@ -15,9 +15,9 @@ Page({
     hufu:'',
     shetu:'',
     curr_id: 0,
-    jiazai: '加载更多',
-    jiazait: '加载更多',
-    jiazaitt: '加载更多',
+    jiazai: '下拉加载更多',
+    jiazait: '下拉加载更多',
+    jiazaitt: '下拉加载更多',
     shenstatus: 0
   },
   onReady: function () {  //创建视频上下文对象
@@ -298,7 +298,6 @@ Page({
   onReady: function () {
   
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
@@ -373,7 +372,22 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    let index = this.data.menuTapCurrent
+    if (!index) {
+      index = 0
+    }
+    console.log(index)
+    switch (Number(index)) {
+      case 0:
+        this.moress()
+        break
+      case 1:
+        this.moresss()
+        break
+      case 2:
+        this.morese()
+        break
+    }
   },
 
   /**
