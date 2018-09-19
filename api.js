@@ -32,6 +32,7 @@ var api = {
     wode: _api_root + 'Wxapp/wode',
     cate: _api_root + 'Wxapp/shetuantype',
     shen: _api_root + 'Wxapp/shen',
+    deletehf: _api_root + 'Wxapp/deletehuifu',
     tuituan: _api_root + 'Wxapp/tuituan',
   },
 };

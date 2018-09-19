@@ -315,6 +315,34 @@ Page({
       }
     })
   },
+  delhf:function(e){
+    let getid = e.currentTarget.dataset.fid;
+    let id=e.currentTarget.dataset.id;
+    var a = this;
+    wx.showModal({
+      title: '删除提示',
+      content: '是否删除该回复？',
+      showCancel: true,
+      success: function (res) {
+        if (res.confirm) {
+          app.request({
+            url: api.Wxapp.deletehf,
+            data: { hid: getid,id:id },
+            success: function (res) {
+              console.log(res);
+              if(res.code==1){
+                a.loadData();
+              }
+            }
+          })
+        } else if (res.cancel) {
+
+        }
+      }
+    })
+   
+    console.log('得到回复的id'+getid); 
+  },
   onShow: function () {
     this.shen();
     this.onLoad();
