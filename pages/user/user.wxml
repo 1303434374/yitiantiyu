@@ -1,0 +1,31 @@
+<view class="user">
+    <view class="top">
+        <view class="c">
+            <view class="l_l"><image src="{{userInfo.avatar}}" /></view>
+        </view>
+        <view class="b">{{userInfo.nick}}</view>
+        <view class="b_b"><image src="../../image/user_logo.gif" /></view>
+    </view>
+    <view class="navMenu">
+            <view class="menu_box">
+                  <text catchtap="menuTap" class="menu1 {{menuTapCurrent=='0'?'borders':''}}" data-current="0">我的发布</text>
+                  <text catchtap="menuTap" class="menu1 {{menuTapCurrent=='1'?'borders':''}}" data-current="1">我的回复</text>
+                  <text catchtap="menuTap" class="menu1 {{menuTapCurrent=='2'?'borders':''}}" data-current="2">我的社团</text>
+            </view>
+            <view class="menu_box_con">
+             <view class="tab1" hidden="{{menuTapCurrent!='0'}}">
+                 <include src="../../commons/user_a.wxml"></include>
+             </view>
+             <view class="tab2" hidden="{{menuTapCurrent!='1'}}">
+                 <include src="../../commons/user_b.wxml"></include>
+             </view>
+             <view class="tab3" hidden="{{menuTapCurrent!='2'}}">
+                 <include src="../../commons/user_c.wxml"></include>
+             </view>
+             </view>
+    </view>
+</view>
+<!-- tarbar  -->
+<import src="../templates/footer.wxml"></import>
+<template is="footerWx" data="{{...tabBar}}"></template>
+

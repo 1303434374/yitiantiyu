@@ -1,0 +1,48 @@
+<view class="fabu">
+    <input  type="text" placeholder='标题...(可选)' bindinput="inputTitle" class="top" />
+    <view class="center">
+    <textarea type="text" placeholder='这一刻的想法...' bindinput="inputContent"></textarea>
+        <!-- <view class="upload">
+         <block wx:for="{{imgArray1}}" wx:key="*this" wx:for-item="item">
+         <view class="content_add rel">
+         <view bindtap="delete" class="delete ab" data-inde="{{index}}">
+         <image class="ab" mode="aspectFill" src="../../image/delete.png"></image>
+         </view>
+         <image  class="add_img" data-index="{{index}}" mode="aspectFill" src="{{url}}{{item}}"></image>
+         </view>
+         </block> -->
+         <!-- <view bindtap="imgArray1" class="content_add"> -->
+         <view class="optClass" style='padding:0 30rpx;flex-wrap:wrap;'>
+         <view class='uploadimgbox' wx:for="{{imgArray1}}" wx:key="item">
+            <!-- <image class='uploadimg' src='{{item.path}}' data-presrc="{{item.path}}" bindtap='previewImg' mode='aspectFill'></image>
+               <cover-view class='progress' wx:if="{{upFilesProgress}}">
+               {{item.progress}}%
+             </cover-view>   -->
+             <image class='uploadimg' src='{{url}}{{item}}'  mode='aspectFill'></image>
+             <cover-view class='delbtn' data-inde="{{index}}" data-type="image" bindtap='delFile'>X</cover-view>
+         </view>
+        <view class='uploadimgbox' wx:for="{{imgArray2}}" wx:key="item">
+           <video class='uploadimg' src="{{url}}{{item}}"  controls ></video>
+            <!-- <cover-view class='progress' wx:if="{{upFilesProgress}}">
+            {{item.progress}}%
+           </cover-view>  -->
+           <cover-view class='delbtn' data-inde="{{index}}" data-type="video" bindtap='delFile'>X</cover-view>
+        </view>
+          <view bindtap="uploadFiles" class="content_add uploadimgbox" hidden="{{imgArray1.length == 3 || imgArray2.length == 1}}">
+         <image class="add_img uploadbtn" src="../../image/addimgsbtn.png"></image>
+         </view>
+         </view>
+         <!-- </view> -->
+   </view>
+    <view class="adds">
+             <view class="l">发布位置</view>
+             <view class="r">
+              <picker bindchange="bindPickerChange" value="{{casIndex}}" range="{{casArray}}">
+               <view class="weui-input">{{casArray[casIndex]}}</view>
+              </picker>
+             </view>
+    </view>
+   <view class="bottom">
+       <view class="fabu_handle" bindtap='subFormData'>发布</view>
+   </view>
+</view>

@@ -1,0 +1,34 @@
+<view class="shetuan">
+    <view class="center">
+             <block wx:if="{{list !=''}}">
+             <scroll-view scroll-y='true' bindscrolltolower='lower'>
+               <block wx:for="{{list}}" wx:key="*this" wx:for-item="item">
+                <li>
+                     <view class="top"> 
+                          <view class="l"><view class="l_l"><image src="{{item.pic}}" /></view></view>
+                          <view class="c"  bindtap="xiangq" data-cid="{{item.id}}" data-title="{{item.title}}">
+                               <text>{{item.title}}</text>
+                               <i>地址:{{item.address}}</i>
+                          </view>
+                          <view class="r_r">
+                            <view class="join" data-sid="{{item.id}}" bindtap='join'>加入</view>
+                          </view>
+                     </view>
+                    <view class="bott">
+                          <text>人数 {{item.renshu}}</text>
+                          <text>帖子 {{item.tiezishu}}</text>
+                    </view>
+                </li>
+                </block>
+                </scroll-view>
+              </block>
+              <block wx:else>
+                    <view class="no"> #暂未搜索到社团信息# </view>
+              </block>
+          </view>
+
+
+
+
+
+</view>

@@ -1,0 +1,29 @@
+<swiper class="swiper-container" autoplay="true" circular="true" indicator-dots="true">
+    <swiper-item style="background-color: #ddd;" wx:for="{{[0,1,2]}}" wx:key="key">
+       <image src="/image/other/jia_{{item}}.jpg" lazy-load="true" />
+    </swiper-item>
+</swiper>
+
+<view class="list-container">
+    <view class="item" catchtap="tap_item" data-id="1">
+        <image src="/image/icon/my-info.png" />
+        <text>公司介绍</text>
+    </view>
+    <view class="content">
+        公司主要服务于中小企业，提供网站策划，网站设计制作建设，网络推广营销于一体的专业服务。公司以“专注网站，用心服务”为核心价值，希望通过我们的专业水平和不懈努力，重塑中小企业网络形象，为企业产品推广，文化建设传播提供服务指导。
+    </view>
+</view>
+<view class="list-container">
+<view class="item border-b" catchtap="tap_item" data-id="2">
+    <image src="/image/icon/feedback.png" />
+    <text>联系电话：18933284405</text>
+</view>
+<view class="item border-b" catchtap="tap_item" data-id="3">
+    <image src="/image/icon/my-collect.png" />
+    <text>营业时间：09:00-18:00</text>
+</view>
+<view class="item" catchtap="tap_item" data-id="4">
+    <image src="/image/icon/my-message.png" />
+    <text>公司地址：广东省珠海市古镇镇西岸工业园</text>
+</view>
+</view>

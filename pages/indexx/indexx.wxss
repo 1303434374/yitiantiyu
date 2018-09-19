@@ -1,0 +1,134 @@
+/**index.wxss**/
+page{background:#eee}
+/*logins*/
+.logins{display: block;width:100%;height:auto;}
+.logins .floatBox {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.logins .floatBoxBg {
+    background: rgb(255,255,255); 
+    
+    display: none;
+    z-index: 1000000;
+}
+.logins .center{width:80%;position: fixed;top:10%;color:#333;margin:0 auto;height:auto;z-index: 1000002;display: block;margin-left:10%;
+}
+.logins .center label{display: block;width:100%;height:35px;line-height: 35px;font-size:16px;padding:0 5px;color:#333}
+.logins .center text{display: blockl;width:100%;height:35px;line-height: 35px;font-size:16px;padding:0 5px;color:#333}
+.logins .center .memo{display: block;width:90%;height:60px;margin-top:10px;}
+.logins .center .memo text{display:block;width:100%;height:25px;line-height: 25px;font-size:11px;color:#999}
+.logins .center .sq{display: block;width:100%;height:40px;margin:10% auto;line-height: 40px;}
+.logins .center .sq button{display:block;border:none;height:40px;width:100%;background: #00B8FF;color:#fff;text-align: center;line-height: 40px;font-size:14px;}
+/*shetuan_index  */
+.hx_index{display: block;width:100%;height:auto}
+.shetuan_index{display: block;width:100%;height:150px;}
+.shetuan_index image{display: block;width:100%;height:100%}
+.htjx{display:block;width:100%;height:38px;line-height: 38px;text-align: center;font-size:15px;color:#333;background:#fff;}
+.center{display: block;width:95%;height:auto;margin:0 auto;margin-top:3%;margin-bottom:8%}
+.center li{display: block;width:100%;height:auto;background:#fff;border-radius:5px;margin-top:5px;margin-bottom:3%}
+.center li .top{display: block;width:100%;height:40px;line-height: 40px;}
+.center li .top .l{display: block;float:left;width:70%;height:100%;padding-top: 20rpx;}
+.center li .top .l image{width:33px;height:33px;border-radius:50%;display: block;margin-left:2%;margin-top:1px}
+.center li .top text{display:block;width:79%;height:100%;font-size:14px;color:#999;float:right;margin-top:-100rpx;line-height:48px}
+.center li .top .r{display: block;float:right;width:26%;height:100%;text-align: right;line-height:40px;font-size:14px;padding:0 8px 0 0;color:#999}
+.center li .title{display: block;width:96%;height:30px;line-height: 30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size:13px;padding:0 4px}
+.center li .content{display: block;width:96%;height:auto;line-height:18px;overflow: hidden;font-size:13px;padding:20rpx 4px;word-break: break-all;word-wrap: break-word;color:#999}
+.center li .image{display: block;width:96%;height:auto;line-height:18px;overflow: hidden;font-size:13px;padding:0 4px;}
+.center li .image .one_video{display: block;width:100%;height:120px;margin-top:5px;margin-bottom:10px;margin:0 auto;position: relative;}
+.center li .image .one_video .uploadimg{display: block;width:90%;height:90%;margin:0 auto}
+.center li .image .one_video .img{display: block;width:100%;height:100%;margin:0 auto}
+.center li .image .one_pic{display: block;width:100%;height:140px;margin-top:5px;margin-bottom:5px}
+.center li .image .one_pic image{display: block;width:100%;height:100%}
+.center li .image .two_pic{display:inline-block;width:30%;height:100px;margin-top:5px;margin-bottom:5px;margin-left:5px;}
+.center li .image .two_pic image{display: block;width:100%;height:100%}
+.center li .image .three_pic{display:inline-block;width:31%;height:100px;margin-top:5px;margin-bottom:5px;margin-left:4.8px;}
+.center li .image .three_pic image{display: block;width:100%;height:100%}
+.center li .bott{display: block;width:100%;height:35px;line-height: 38px;}
+.center li .bott label{display:inline-block;width:31.5%;margin-left:3px;line-height:35px;height:30px;text-align: center;font-size:12px;color:#999;}
+.center li .bott label image{display:block;width:18px;height:18px;margin-left:15%;margin-top:6%;}
+.center li .bott label i{display:block;height:28px;width:60%;margin-left:5%;margin-top:-27px;float:right;text-align: left}
+.center li .d{display: block;width:100%;height:10px;line-height:10px}
+.float-icon {position:fixed;
+z-index:20;
+right:50rpx;
+bottom:140rpx;
+}
+.float-icon .float-icon-btn {
+display:block;
+padding:0;
+margin:0;
+border:none;
+background:none;
+}
+.float-icon .float-icon-btn image {
+width:86rpx;
+height:86rpx;
+display:block;
+}
+
+.video{
+    margin-bottom: 40rpx;
+    position: relative;
+}
+
+image,video {
+width:98%;
+height:140px;
+display:block;
+margin:0 auto;
+margin-bottom:5%
+}
+.center .ajax_onload{display:block;width:60%;height:28px;line-height: 28px;text-align: center;margin-top:8px;font-size:14px;color:#999;margin:0 auto;}
+.tab_con_img{
+
+background: url("http://p2.so.qhimgs1.com/t019ffe68eb65f668ae.jpg");
+position: absolute;
+top: 60rpx;
+width: 690rpx;
+border: 0rpx;
+background-color: red;
+height: 390rpx;
+
+}
+.huaxue {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.huaxue .item {
+    flex: 0 0 33.3%;
+    height: 270rpx;
+}
+
+.huaxue .item image {
+    width: 100%;
+    height: 100%;
+}
+
+.topimg {
+    position: relative;
+}
+
+.topimg .play {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;   
+    z-index: 2;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+
+
+
+
+
+

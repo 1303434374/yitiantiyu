@@ -1,0 +1,5 @@
+<view direction="all" class="float-icon" bindtap='addst'>
+  <view class="float-icon-btn">
+    <image src="../../image/add.png"></image>
+  </view>
+</view>

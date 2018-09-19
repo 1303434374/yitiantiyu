@@ -1,0 +1,21 @@
+<view class="tab-contents">
+   <view wx:for="{{hufu}}" wx:key="*this" wx:fot-item="item">
+     <li bindtap="goview" data-cid="{{item.id}}">
+               <view class="tops">
+                  <view class="l">
+                       <image src="{{item.avatar}}" /> 
+                       <text>{{item.nick}}</text>
+                       <i>{{item.time}}</i>
+                  </view>
+                  <!-- <view class="r"> 
+                        <view class="tig"></view>
+                  
+                  </view> -->
+               </view>
+               <view class="title">回复 : {{item.content}}</view>
+               <view class="content">帖子 : {{item.title}}</view>
+               <view class="d"></view>
+           </li>
+  </view>
+   <view class="ajax_onload" bindtap="moresss">—— {{jiazait}} ——</view>
+</view>

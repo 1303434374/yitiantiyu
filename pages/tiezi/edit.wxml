@@ -1,0 +1,46 @@
+<view class="fabu">
+<block wx:for="{{cha}}" wx:key="*this" wx:for-item="item">
+<form bindsubmit="formReport" reportSubmit="true">
+    <input  hidden="true" name="id" value="{{item.id}}"/>
+    <input  type="text" name="title" value="{{item.title}}" class="top" />
+    <view class="center">
+    <textarea  name="content" bindinput="inputContent">{{content}}</textarea>
+        <!-- <view class="upload">
+         <block wx:for="{{imgArray1}}" wx:key="*this" wx:for-item="item">
+         <view class="content_add rel">
+         <view bindtap="delete" class="delete ab" data-inde="{{index}}">
+         <image class="ab" mode="aspectFill" src="../../image/delete.png"></image>
+         </view>
+         <image  class="add_img" data-index="{{index}}" mode="aspectFill" src="{{url}}{{item}}"></image>
+         </view>
+         </block> -->
+         <!-- <view bindtap="imgArray1" class="content_add"> -->
+         <view class="optClass" style='padding:0 30rpx;flex-wrap:wrap;'>
+         <view class='uploadimgbox' wx:for="{{imgArray1}}" wx:key="item">
+            <!-- <image class='uploadimg' src='{{item.path}}' data-presrc="{{item.path}}" bindtap='previewImg' mode='aspectFill'></image>
+               <cover-view class='progress' wx:if="{{upFilesProgress}}">
+               {{item.progress}}%
+             </cover-view>   -->
+             <image class='uploadimg' src='{{url}}{{item}}'  mode='aspectFill'></image>
+             <cover-view class='delbtn' data-inde="{{index}}" data-type="image" bindtap='delFile'>X</cover-view>
+         </view>
+        <view class='uploadimgbox' wx:for="{{imgArray2}}" wx:key="item">
+           <video class='uploadimg' src="{{url}}{{item}}"  controls ></video>
+            <!-- <cover-view class='progress' wx:if="{{upFilesProgress}}">
+            {{item.progress}}%
+           </cover-view>  -->
+           <cover-view class='delbtn' data-inde="{{index}}" data-type="video" bindtap='delFile'>X</cover-view>
+        </view>
+          <view bindtap="uploadFiles" class="content_add uploadimgbox">
+         <image class="add_img uploadbtn" src="../../image/addimgsbtn.png"></image>
+         </view>
+         </view>
+         <!-- </view> -->
+   </view>
+   <view class="bottom">
+       <button formType="submit" class="fabu_handle" style="border:none">编辑</button>
+   </view>
+   </form>
+   <view class="del" bindtap='del'>删除</view> 
+   </block>
+</view>

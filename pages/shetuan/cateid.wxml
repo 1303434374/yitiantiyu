@@ -1,0 +1,85 @@
+<view class="cateid">
+      <view class="c_t">
+      <block wx:if="{{typedata !=''}}">
+      <block wx:for="{{typedata}}" wx:key="*this" wx:for-item="item">
+           <li bindtap="seach" data-title="{{item.tname}}" data-cateid="{{item.id}}">
+              <view class="l">
+                    <view class="l_l"><image src="{{item.logoimg}}" /> </view>
+              </view>
+              <view class="c">
+                  <view class="c_l">
+                     <text>{{item.tname}}</text>
+                     <i>{{item.desc}}</i> 
+                  </view>
+                  <view class="r">
+                       <view class="z"><image src="{{right}}" /></view>
+                  </view>  
+              </view>
+           </li>
+      </block>
+       </block>
+      <block wx:else>
+              <view class="no"> #暂无社团# </view>
+      </block>
+            <!-- <li bindtap="seach" data-title="雪地摩托" data-cateid="2">
+           <view class="l">
+                    <view class="l_l"><image src="{{sx_02}}" /> </view>
+              </view>
+              <view class="c">
+                  <view class="c_l">
+                     <text>雪地摩托</text>
+                     <i>雪地摩托是一项享受速度和自由的运...</i> 
+                  </view>
+                  <view class="r">
+                       <view class="z"><image src="{{right}}" /></view>
+                  </view>  
+              </view>
+           </li> -->
+           <!-- <li bindtap="seach" data-title="马拉爬犁" data-cateid="3">
+           <view class="l">
+                    <view class="l_l"><image src="{{sx_03}}" /> </view>
+              </view>
+              <view class="c">
+                  <view class="c_l">
+                     <text>马拉爬犁</text>
+                     <i>体验在雪地上扬鞭疾驰和大自然亲...</i> 
+                  </view>
+                  <view class="r">
+                       <view class="z"><image src="{{right}}" /></view>
+                  </view>  
+              </view>
+           </li>
+           <li bindtap="seach" data-title="雪橇滑雪" data-cateid="4">
+           <view class="l">
+                    <view class="l_l"><image src="{{sx_04}}" /> </view>
+              </view>
+              <view class="c">
+                  <view class="c_l">
+                     <text>雪橇滑雪</text>
+                     <i>和雪橇三傻一起玩乐...</i> 
+                  </view>
+                  <view class="r">
+                       <view class="z"><image src="{{right}}" /></view>
+                  </view>  
+              </view>
+           </li>
+           <li bindtap="seach" data-title="休闲娱乐" data-cateid="5">
+             <view class="l">
+                    <view class="l_l"><image src="{{sx_05}}" /> </view>
+              </view>
+              <view class="c">
+                  <view class="c_l">
+                     <text>休闲娱乐</text>
+                     <i>休闲娱乐，放松自己，打打酱油...</i> 
+                  </view>
+                  <view class="r">
+                       <view class="z"><image src="{{right}}" /></view>
+                  </view>  
+              </view> 
+           </li>  -->
+      </view>
+
+</view>
+<!-- tarbar  -->
+<import src="../templates/footer.wxml"></import>
+<template is="footerWx" data="{{...tabBar}}"></template>

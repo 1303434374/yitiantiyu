@@ -1,0 +1,72 @@
+page{background: #eee}
+.cateid{display: block;width:100%;}
+.cateid .c_t{display:block;margin-top:8px;}
+.cateid .c_t li{display: block;width:100%;height:80px;background:#fff;border-bottom:1px solid #eee}
+.cateid .c_t li .l{display:block;width:20%;height:100%;float:left}
+.cateid .c_t li .l .l_l{display: block;width:58px;height:58px;margin:11.5% auto}
+.cateid .c_t li .l .l_l image{display: block;width:100%;height:100%}
+.cateid .c_t li .c{display: block;width:78%;height:100%;float:right}
+.cateid .c_t li .c .c_l{display: block;float:left;width:80%;height:100%;}
+.cateid .c_t li .c text{display:block; width:100%;height:28px;line-height:28px;margin-top:5%;font-size:15px;}
+.cateid .c_t li .c i{display:block; width:100%;height:28px;line-height:28px;margin-top:0%;font-size:13px;color:#999;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.cateid .c_t li .c .r{display: block;width:18%;height:100%;float:right;}
+.cateid .c_t li .c .z{display: block;width:30px;height:35px;margin:38% auto}
+.cateid .c_t li .c .z image{display: block;width:100%;height:100%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

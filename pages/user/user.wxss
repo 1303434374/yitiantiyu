@@ -1,0 +1,87 @@
+/* pages/user/user.wxss */
+page{background: #eee}
+.user{display: block;width:100%;height:auto;}
+.user .top{display: block;width:100%;height:160px;background: #00B8FF;}
+.user .top .c{display:inline-block;width:100%;height:60px;margin-top:2%;}
+.user .top .c .l_l{display: block;width:60px;height:60px;margin:0 auto;border-radius:50%}
+.user .top .c .l_l image{display: block;width:100%;height:100%;border-radius:50%;}
+.user .top .b{display:block;width:100%;line-height: 28px;text-align: center;color:#fff;font-size:14px;}
+.user .top .b_b{display:block;width:100%;height:37px;margin:9% auto}
+.user .top .b_b image{display:block;width:100%;height:100%;}
+.user .navMenu{display: block;width: 100%;height:auto;}
+.user .navMenu .menu_box{display: block;width:100%;height:42px;line-height: 42px;background: #fff}
+.user .navMenu .menu_box text{display: inline-block;width:28.5%;height:98%;margin-left:3%;text-align: center;font-size:14px;color:#333}
+.user .navMenu .menu_box_con{display:block;width:94%;height:auto;margin:0 auto;margin-top:2%;}
+.user .navMenu .menu_box .borders{color: #00B8FF;border-bottom:1px solid #00B8FF;}
+/*tab-content  */
+.tab-content{display: block;width:100%;height:auto;}
+.tab-content li{display: block;width:100%;height:auto;background:#fff;border-radius:5px;margin-top:5px;margin-bottom:3%}
+.tab-content li .tops{display: block;width:100%;height:60px;line-height: 40px;}
+.tab-content li .tops .l{display: block;float:left;width:70%;height:100%;}
+.tab-content li .tops .l image{width:40px;height:40px;border-radius:50%;display: block;margin-left:2%;margin-top:3.50%;}
+.tab-content li .tops text{display:block;width:79%;height:28px;font-size:14px;float:right;margin-top:-48px;color:#333}
+.tab-content li .tops i{display:block;width:79%;height:28px;font-size:13px;color:#999;float:right;margin-top:-20px;line-height:28px}
+.tab-content li .tops .r{display: block;float:right;width:26%;height:100%;text-align: right;line-height:40px;font-size:14px;padding:0 8px 0 0;color:#999;}
+.tab-content li .tops .r .tig{display: block;float: right;width:60px;height:90%;margin-right:18%;flex: 1;position: relative;
+    background: url(https://hx.possji.cn/Upload/icon/edit.gif)  no-repeat;background-size:65% 100%;text-align: center;font-size:13px;color:#999;
+    margin-top:0%;line-height:50px;
+}
+.tab-content li .title{display: block;width:96%;height:30px;line-height: 30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size:13px;padding:0 4px}
+.tab-content li .content{display: block;width:96%;height:auto;line-height:18px;overflow: hidden;font-size:13px;padding:0 4px;word-break: break-all;word-wrap: break-word;color:#999}
+.tab-content li .image{display: block;width:96%;height:auto;line-height:18px;overflow: hidden;font-size:13px;padding:0 4px;}
+.tab-content li .image .one_pic{display: block;width:100%;height:140px;margin-top:5px;margin-bottom:5px}
+.tab-content li .image .one_pic image{display: block;width:100%;height:100%}
+.tab-content li .image .two_pic{display:inline-block;width:30%;height:100px;margin-top:5px;margin-bottom:5px;margin-left:5px;}
+.tab-content li .image .two_pic image{display: block;width:100%;height:100%}
+.tab-content li .image .three_pic{display:inline-block;width:31%;height:100px;border:1px solid #eee;margin-top:5px;margin-bottom:5px;margin-left:4.8px;}
+.tab-content li .image .three_pic image{display: block;width:100%;height:100%}
+.tab-content li .bott{display: block;width:100%;height:35px;line-height: 38px;margin-top:-3%}
+.tab-content li .bott label{display:inline-block;width:31.5%;margin-left:3px;line-height:35px;height:30px;text-align: center;font-size:12px;color:#999;}
+.tab-content li .bott label image{display:block;width:18px;height:18px;margin-left:15%;margin-top:6%;}
+.tab-content li .bott label i{display:block;height:28px;width:60%;margin-left:5%;margin-top:-27px;float:right;text-align: left}
+.tab-content li .d{display: block;width:100%;height:5px;line-height:10px}
+/*tab-contents  */
+/*tab-content  */
+.tab-contents{display: block;width:100%;height:auto;}
+.tab-contents li{display: block;width:100%;height:auto;background:#fff;border-radius:5px;margin-top:5px;margin-bottom:3%}
+.tab-contents li .tops{display: block;width:100%;height:60px;line-height: 40px;}
+.tab-contents li .tops .l{display: block;float:left;width:70%;height:100%;}
+.tab-contents li .tops .l image{width:40px;height:40px;border-radius:50%;display: block;margin-left:2%;margin-top:3.50%;}
+.tab-contents li .tops text{display:block;width:79%;height:28px;font-size:14px;float:right;margin-top:-48px;color:#333}
+.tab-contents li .tops i{display:block;width:79%;height:28px;font-size:13px;color:#999;float:right;margin-top:-20px;line-height:28px}
+.tab-contents li .tops .r{display: block;float:right;width:26%;height:100%;text-align: right;line-height:40px;font-size:14px;padding:0 8px 0 0;color:#999;}
+.tab-contents li .tops .r .tig{display: block;float: right;width:60px;height:90%;margin-right:18%;flex: 1;position: relative;
+    background: url(https://hx.possji.cn/Upload/icon/edit.gif)  no-repeat;background-size:65% 100%;text-align: center;font-size:13px;color:#999;
+    margin-top:0%;line-height:50px
+}
+.tab-contents li .title{display: block;width:96%;height:30px;line-height: 30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size:13px;padding:0 6px;}
+.tab-contents li .content{display: block;width:96.6%;height:30px;line-height:30px;overflow: hidden;font-size:13px;padding:0 6px;white-space: nowrap;text-overflow: ellipsis;color:#333;margin-top:3%;background: #f8f8f8}
+.tab-contents li .d{display: block;width:100%;height:18px;line-height:10px}
+/*tab-contentss  */
+ .tab-contentss{display: block;width:100%;height:auto;}
+.tab-contentss  li{display: block;width:100%;height:130px;margin-top:2%;background: #fff;border-radius:5px;margin-bottom:3%}
+.tab-contentss  li .topss{display: block;width:100%;height:73%;border-bottom:1px solid #eee}
+.tab-contentss  li .ls{display:inline-block;width:65px;height:65px;border:1px solid #eee;margin-top:4%;margin-left:3%;}
+.tab-contentss  li .ls image{display: block;width:100%;height:100%}
+.tab-contentss  li .cs{display:inline-block;width:51%;height:100%;}
+.tab-contentss  li .cs text{display:inline-block;width:95%;height:30px;line-height:30px;margin-top:8%;padding:0 5px;font-size:15px;}
+.tab-contentss  li .cs i{display:block;width:95%;height:30px;line-height:32px;padding:0 5px;font-size:12px;color:#999;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.tab-contentss  li .r_r{display: block;float: right;width:20%;height:100%;}
+.tab-contentss  li .r_r .join{display: block;width:90%;height:30px;margin:38% auto;background:#00B8FF;color:#fff;text-align: center;line-height: 30px;font-size:13px;margin-right:7px;border-radius:8px}
+.tab-contentss  li .bott{display: block;width:100%;height:21%;margin-top:2px;}
+.tab-contentss  li .bott text{display: inline-block;width:48%;height:100%;margin-left:1%;text-align: center;line-height:29px;color:#999;font-size:13px} 
+.tab-content  .ajax_onload{display:block;width:60%;height:28px;line-height: 28px;text-align: center;margin-top:8px;font-size:14px;color:#999;margin:0 auto;margin-bottom:10%;}
+.tab-contents .ajax_onload{display:block;width:60%;height:28px;line-height: 28px;text-align: center;margin-top:8px;font-size:14px;color:#999;margin:0 auto;margin-bottom:10%;}
+.tab-contentss .ajax_onload{display:block;width:60%;height:28px;line-height: 28px;text-align: center;margin-top:8px;font-size:14px;color:#999;margin:0 auto;margin-bottom:10%;}
+.video{
+    margin-bottom: 40rpx;
+    position: relative;
+}
+
+image,video {
+width:98%;
+height:140px;
+display:block;
+margin:0 auto;
+margin-bottom:5%
+}

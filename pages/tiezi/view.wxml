@@ -1,0 +1,79 @@
+<block wx:if="{{viesL != '' }}">
+   <view wx:for="{{viesL}}" wx:key="*this" wx:fot-item="item">
+           <li>
+               <view class="top">
+                  <view class="l">
+                       <image src="{{item.avatar}}" /> 
+                       <text>{{item.nick}}</text>
+                  </view>
+                  <view class="r"> {{item.time}}</view>
+               </view>
+               <view class="title">{{item.title}}</view>
+               <view class="content">{{item.content}}</view>
+               <view class="image">
+                    <block wx:if="{{item.image !=''}}">
+                            <block wx:for="{{item.image}}" wx:key="*this" wx:for-item="vitem">
+                               <block wx:if="{{item.image.length == 1}}">
+                                    <view class="one_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                               <block wx:if="{{item.image.length == 2}}">
+                                    <view class="two_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                               <block wx:if="{{item.image.length == 3}}">
+                                    <view class="three_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                            </block>
+                    </block>
+                    <block wx:if="{{item.video !='' && item.image == ''}}">
+                       <block wx:for="{{item.video}}" wx:key="*this" wx:for-item="sitem">
+                           <view class="one_video">
+                                 <video class='uploadimg' src="{{url}}{{sitem}}"  controls ></video>
+                           </view>
+                       </block>
+                    </block>
+               </view>
+               <view class="bott">
+                     <label>
+                        <image src="../../image/eyes.png" /> <i>{{item.is_eye}}</i>
+                     </label>
+                     <label>
+                        <image src="../../image/xiaoxi.png" /> <i>{{item.is_ping}}</i>
+                     </label>
+                      <label>
+                       <image src="../../image/zan.png" /> <i>{{item.is_zan}}</i>
+                      </label>
+               </view>
+               <view class="d"></view>
+           </li>
+        </view>
+</block>
+<view class="center">
+    <view class="top">全部回复</view>
+    <view class="c">
+    <block wx:if="{{huda != '' }}">
+    <scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+       <view wx:for="{{huda}}" wx:key="*this" wx:for-item="item">
+           <label>
+               <view class="l">
+                   <view class="l_l"><image src="{{item.avatar}}" /></view>
+                </view>
+               <view class="r">
+                    <view class="t">
+                        <view class="t_l">{{item.nick}}</view>
+                        <view class="t_r">{{item.time}}</view>
+                     </view>
+                     <view class="b">{{item.content}}</view>
+               </view>
+           </label>
+       </view>
+      </scroll-view>
+    </block>
+    <block wx:else>
+        <view class="no"> 暂无评论，抢沙发！</view>
+    </block>
+    </view>
+    <view class="botts">
+   <view class="l"><input type="text"  placeholder='说说你的看法...' bindinput="inputTitle" /></view>
+   <view class="r" bindtap='gohandle'>发送</view>
+</view>
+</view>

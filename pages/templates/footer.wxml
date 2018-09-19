@@ -1,0 +1,27 @@
+<template name="footerWx">
+    <view class="we7-bottom" style="background-color:{{backgroundColor}};border-color:{{borderStyle}};" wx:if="{{list}}">
+        <block  wx:for="{{list}}" wx:key="{{index}}">
+            <view class="we7-bottom-item" hoverClass="active" wx:if="{{item.pageUrl=='/'+thisurl}}">
+                <navigator hoverClass="active" openType="redirect" url="{{item.pagePath}}">
+                    <image class="item-img" mode="widthFix" src="{{item.selectedIconPath}}"></image>
+                    <view class="item-text" style="color: {{selectedColor}};">{{item.text}}</view>
+                </navigator>
+            </view>
+            <view class="we7-bottom-item" hoverClass="active" wx:else>
+                <block wx:if="{{item.type==1}}">
+                    <navigator hoverClass="active" target="miniProgram" app-id="wx92bf46793086e00f" path="{{item.pagePath}}">
+                        <image class="item-img" mode="widthFix" src="{{item.iconPath}}"></image>
+                        <view class="item-text" style="color: {{color}}">{{item.text}}</view>
+                    </navigator>
+                </block>
+                <block wx:else>
+                    <navigator hoverClass="active" openType="redirect" url="{{item.pagePath}}">
+                        <image class="item-img" mode="widthFix" src="{{item.iconPath}}"></image>
+                        <view class="item-text" style="color: {{color}}">{{item.text}}</view>
+                    </navigator>
+                </block>
+            </view>
+        </block>
+    </view>
+    <view class="we7-bottom-placeholder"></view>
+</template>

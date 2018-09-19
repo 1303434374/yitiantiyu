@@ -1,0 +1,58 @@
+<view class="tab-content">
+   <view wx:for="{{fabu}}" wx:key="*this" wx:fot-item="item">
+        <li>
+               <view class="tops">
+                  <view class="l">
+                       <image src="{{item.avatar}}" /> 
+                       <text>{{item.nick}}</text>
+                       <i>{{item.time}}</i>
+                  </view>
+                  <view class="r"> 
+                        <!-- <view class="tig">编辑</view> -->
+                        <view class="tig" bindtap='edits' data-id="{{item.id}}"></view>
+                  </view>
+               </view>
+               <view class="title">{{item.title}}</view>
+               <view class="content">{{item.content}}</view>
+               <view class="image">
+                <block wx:if="{{item.image !=''}}">
+                            <block wx:for="{{item.image}}" wx:key="*this" wx:for-item="vitem">
+                               <block wx:if="{{item.image.length == 1}}">
+                                    <view class="one_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                               <block wx:if="{{item.image.length == 2}}">
+                                    <view class="two_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                               <block wx:if="{{item.image.length == 3}}">
+                                    <view class="three_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                            </block>
+                    </block>
+                    <block wx:if="{{item.video !='' && item.image == ''}}">
+                       <block wx:for="{{item.video}}" wx:key="*this" wx:for-item="sitem">
+                            <view  class="uploadimg" data-id="{{item.id}}" bindtap="videoPlay" style="display:{{is_hidden == 0 ? 'none':'block'}}" wx:if="{{curr_id == item.id}}">
+                              <video id="index{{ index }}" id="myVideo" data-id="{{item.id}}" bindplay="bindplay" bindended='bindended' src="{{url}}{{sitem}}"  objectFit="cover" direction="0" autoplay='true'  poster="{{url}}{{item.topimg}}"></video>
+                            </view>
+                             <view wx:else >
+                                <video id="index{{ index }}" id="myVideo" data-id="{{item.id}}" bindplay="bindplay" bindended='bindended' src="{{url}}{{sitem}}"  objectFit="cover" direction="0" poster="{{url}}{{item.topimg}}"></video>
+                               <!-- <image class="uploadimg"  mode="aspectFill" src="../../image/add_plus[old].png"></image> -->
+                              </view>
+                       </block>
+                    </block>
+               </view>
+               <view class="bott">
+                     <label>
+                        <image src="../../image/eyes.png" /> <i>{{item.is_eye}}</i>
+                     </label>
+                     <label  bindtap="views" data-id="{{item.id}}">
+                        <image src="../../image/xiaoxi.png"/> <i>{{item.is_ping}}</i>
+                     </label>
+                      <label>
+                       <image src="../../image/zan.png"/> <i>{{item.is_zan}}</i>
+                      </label>
+               </view>
+               <view class="d"></view>
+           </li>
+   </view>
+   <view class="ajax_onload" bindtap="moress">—— {{jiazai}} ——</view>
+</view>

@@ -1,0 +1,22 @@
+<view class="tab-contentss">
+  <view wx:for="{{shetu}}" wx:key="*this" wx:fot-item="item">
+                 <li>
+                     <view class="topss"> 
+                          <view class="ls"><image src="{{item.pic}}" /></view>
+                          <view class="cs">
+                               <text>{{item.title}}</text>
+                               <i>地址:{{item.address}}</i>
+                          </view>
+                          <view class="r_r">
+                            <view class="join" bindtap="cha" data-cid="{{item.id}}" data-title="{{item.title}}">查看</view>
+                          </view>
+                     </view>
+                    <view class="bott">
+                          <text>人数 {{item.renshu}}</text>
+                          <text>帖子 {{item.tiezishu}}</text>
+                    </view>
+                </li> 
+
+   </view>
+ <view class="ajax_onload" bindtap="morese">—— {{jiazaitt}} ——</view>
+</view>
