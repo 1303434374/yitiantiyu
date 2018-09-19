@@ -161,7 +161,7 @@ Page({
   chooseImage: function (t, n) {
     var _imgArray = t.data._imgArray
     var t = this,
-      n = 3 - _imgArray.length;
+      n = 9 - _imgArray.length;
     n > 0 && n <= 9 ? wx.chooseImage({
       count: n,
       sizeType: ["compressed"],
