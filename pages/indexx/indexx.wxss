@@ -38,7 +38,7 @@ page{background:#eee}
 .center li .top .r{display: block;float:right;width:26%;height:100%;text-align: right;line-height:40px;font-size:14px;padding:0 8px 0 0;color:#999}
 .center li .title{display: block;width:96%;height:30px;line-height: 30px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size:13px;padding:0 4px}
 .center li .content{display: block;width:96%;height:auto;line-height:18px;overflow: hidden;font-size:13px;padding:20rpx 4px;word-break: break-all;word-wrap: break-word;color:#999}
-.center li .image{display: block;width:96%;height:auto;line-height:18px;overflow: hidden;font-size:13px;padding:0 4px;}
+.center li .image{display: block;width:98%;height:auto;line-height:18px;overflow: hidden;font-size:13px;padding:0 4px;}
 .center li .image .one_video{display: block;width:100%;height:120px;margin-top:5px;margin-bottom:10px;margin:0 auto;position: relative;}
 .center li .image .one_video .uploadimg{display: block;width:90%;height:90%;margin:0 auto}
 .center li .image .one_video .img{display: block;width:100%;height:100%;margin:0 auto}
@@ -77,8 +77,8 @@ display:block;
 }
 
 image,video {
-width:98%;
-height:140px;
+width:100%;
+height:400rpx;
 display:block;
 margin:0 auto;
 margin-bottom:5%
