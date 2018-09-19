@@ -2,10 +2,10 @@
 {
   "pages":[
     "pages/user/user",
+    "pages/indexx/indexx",
+   
     "pages/shen/shen",
     "pages/index/index",
-    "pages/indexx/indexx",
-    
     "pages/shetuan/shetuan",
     "pages/shetuan/cateid",
     "pages/shetuan/xianqing",
