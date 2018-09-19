@@ -7,11 +7,11 @@
                        <text>{{item.nick}}</text>
                        <i>{{item.time}}</i>
                   </view>
-                  <view class='delhf' catchtap='delhf' data-fid='{{item.h_id}}' data-id='{{item.id}}'>删除</view>
-                  <!-- <view class="r"> 
-                        <view class="tig"></view>
                   
-                  </view> -->
+                   <view class="r"> 
+                        <view class='delhf' catchtap='delhf' data-fid='{{item.h_id}}' data-id='{{item.id}}'>删除</view>
+                  
+                  </view> 
                </view>
                <view class="title">回复 : {{item.content}}</view>
                <view class="content">帖子 : {{item.title}}</view>

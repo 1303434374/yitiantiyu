@@ -82,7 +82,7 @@
                <view class="d"></view>
            </li>
         </view>
-         <view class="ajax_onload" bindtap="mores">—— {{jiazai}} ——</view>
+         <!--<view class="ajax_onload" bindtap="mores">—— {{jiazai}} ——</view>-->
    </view>
 </view>
 <!-- add  -->

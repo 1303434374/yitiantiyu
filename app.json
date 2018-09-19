@@ -1,9 +1,8 @@
 
 {
   "pages":[
-    "pages/user/user",
     "pages/indexx/indexx",
-   
+    "pages/user/user",
     "pages/shen/shen",
     "pages/index/index",
     "pages/shetuan/shetuan",

@@ -376,15 +376,23 @@ Page({
     if (!index) {
       index = 0
     }
-    console.log(index)
     switch (Number(index)) {
       case 0:
+        if (this.data.jiazai == '已全部加载') {
+          return
+        }
         this.moress()
         break
       case 1:
+        if (this.data.jiazait == '已全部加载') {
+          return
+        }
         this.moresss()
         break
       case 2:
+        if (this.data.jiazaitt == '已全部加载') {
+          return
+        }
         this.morese()
         break
     }

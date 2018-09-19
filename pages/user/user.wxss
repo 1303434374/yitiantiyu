@@ -104,12 +104,12 @@ page{background: #eee}
 /*tab-contents  */
 /*tab-content  */
 .tab-contents{display: block;width:100%;height:auto;}
-.tab-contents li{display: block;width:100%;height:auto;background:#fff;border-radius:5px;margin-top:5px;margin-bottom:3%}
+.tab-contents li{display: block;width:100%;height:auto;background:#fff;margin-top:5px;margin-bottom:3%}
 .tab-contents li .tops{display: block;width:100%;height:60px;line-height: 40px;}
 .tab-contents li .tops .l{display: block;float:left;width:70%;height:100%;}
 .tab-contents li .tops .l image{width:40px;height:40px;border-radius:50%;display: block;margin-left:2%;margin-top:3.50%;}
-.tab-contents li .tops text{display:block;width:79%;height:28px;font-size:14px;float:right;margin-top:-48px;color:#333}
-.tab-contents li .tops i{display:block;width:79%;height:28px;font-size:13px;color:#999;float:right;margin-top:-20px;line-height:28px}
+.tab-contents li .tops text{display:block;width:79%;height:28px;font-size:14px;float:right;margin-top:-120rpx;color:#333}
+.tab-contents li .tops i{display:block;width:79%;height:28px;font-size:13px;color:#999;float:right;margin-top:-60rpx;line-height:28px}
 .tab-contents li .tops .r{display: block;float:right;width:26%;height:100%;text-align: right;line-height:40px;font-size:14px;padding:0 8px 0 0;color:#999;}
 .tab-contents li .tops .r .tig{display: block;float: right;width:60px;height:90%;margin-right:18%;flex: 1;position: relative;
     background: url(https://hx.possji.cn/Upload/icon/edit.gif)  no-repeat;background-size:65% 100%;text-align: center;font-size:13px;color:#999;
@@ -148,5 +148,13 @@ margin:0 auto;
 margin-bottom:5%
 }
 .delhf{
- 
+ width:100rpx;
+height:60rpx;
+line-height:60rpx;
+text-align:center;
+background-color:#f00;
+color:#fff;
+border-radius:10rpx;
+margin-left:80rpx;
+margin-top:20rpx;
 }
