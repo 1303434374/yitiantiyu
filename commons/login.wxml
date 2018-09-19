@@ -1,9 +1,9 @@
 <view class="logins" wx:if="{{is_login == 0}}">
     <view class="center">
-          <label>欢迎来到滑雪社团</label>
-           <text>滑雪社团需要你的授权</text>
+          <label>欢迎来到逸天体育</label>
+           <text>逸天体育需要您的授权</text>
            <view class="memo">
-                <text>滑雪社团不会将你的信息提供给第三方</text>
+                <text>逸天体育不会将您的信息提供给第三方</text>
                 <text>仅用于互动等个人信息展示</text>
            </view>
            <view class="sq">

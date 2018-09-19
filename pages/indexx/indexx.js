@@ -23,7 +23,7 @@ Page({
     prevVideoId:0,
     curr_id:0,
     playTime: '',
-    jiazai:'加载更多',
+    jiazai:'正在拼命加载',
     shenstatus: 0
   },
   onReady: function () {  //创建视频上下文对象
@@ -284,9 +284,12 @@ Page({
     }
   },
   more:function(){
+    if (this.data.jiazai == '全部加载完毕') {
+      return
+    }
      var page = this;
      wx.showLoading({
-       title: '加载中',
+       title: '正在拼命加载',
        mask: true
      })
      app.request({
@@ -300,7 +303,7 @@ Page({
          var z = res.data.lists
          if (z == '') {
           page.setData({
-            jiazai:'已全部加载'
+            jiazai:'全部加载完毕'
           })
            return false;
          }
@@ -327,6 +330,9 @@ Page({
   */
   onShareAppMessage: function () {
 
+  },
+  onReachBottom: function (event) {
+    this.more()
   },
 shen: function () {
     var a = this;
