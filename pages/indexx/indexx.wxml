@@ -3,7 +3,10 @@
        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
        <!-- <swiper-item><image src="../../image/ad2.png"/></swiper-item> -->
          <block wx:for="{{banner}}" wx:key="*this" wx:for-item="item">
-          <swiper-item><image src="{{item.b_img}}"/></swiper-item>
+         <navigator hoverClass="active" target="miniProgram" app-id="{{item.b_appid}}" path="{{item.b_gourl}}">
+         <swiper-item><image src="{{item.b_img}}"/></swiper-item>
+         </navigator>
+          
         </block> 
        </swiper>
    </view>
@@ -33,6 +36,25 @@
                                <block wx:if="{{item.image.length == 3}}">
                                     <view class="three_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
                                </block>
+                                <block wx:if="{{item.image.length == 4}}">
+                                    <view class="four_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                               <block wx:if="{{item.image.length == 5}}">
+                                    <view class="five_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                                    <block wx:if="{{item.image.length == 6}}">
+                                    <view class="six_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                                     <block wx:if="{{item.image.length == 7}}">
+                                    <view class="sev_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                                    <block wx:if="{{item.image.length == 8}}">
+                                    <view class="eig_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                                     <block wx:if="{{item.image.length == 9}}">
+                                    <view class="nie_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                              
                             </block>
                     </block>
                     <block wx:if="{{item.video !='' && item.image == ''}}">

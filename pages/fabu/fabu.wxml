@@ -28,7 +28,8 @@
            </cover-view>  -->
            <cover-view class='delbtn' data-inde="{{index}}" data-type="video" bindtap='delFile'>X</cover-view>
         </view>
-          <view bindtap="uploadFiles" class="content_add uploadimgbox" hidden="{{imgArray1.length == 3 || imgArray2.length == 1}}">
+          <!-- <view bindtap="uploadFiles" class="content_add uploadimgbox" hidden="{{imgArray1.length == 3 || imgArray2.length == 1}}"> -->
+          <view bindtap="uploadFiles" class="content_add uploadimgbox" hidden="{{imgArray1.length >= 9}}">
          <image class="add_img uploadbtn" src="../../image/addimgsbtn.png"></image>
          </view>
          </view>

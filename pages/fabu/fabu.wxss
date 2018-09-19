@@ -8,7 +8,7 @@
 .upload .delete{ width: 100%; height: 50rpx; top: 0; z-index: 500; }
 .upload .delete wx-image{ width: 50rpx; height: 50rpx; right: 2%; top: 0; }
 .content_add>wx-image { width: 90%; max-height: 150rpx; }
-.fabu .bottom{position:absolute;width:92%;height:38px;bottom:4%;}
+.fabu .bottom{position:absolute;width:92%;height:38px;}
 .fabu .bottom .fabu_handle{display:block;width:100%;height:38px;line-height: 38px;text-align: center;margin:0 auto;background:#00B8FF;color:#fff;font-size:13px;border-radius:5px} 
 .optClass{
     background-color: #fff;
@@ -58,7 +58,7 @@
     width: 100%;
     height: 208rpx;
 }
-.adds{display: block;width:98.5%;height:35px;margin-top:20rpx;}
+.adds{display: block;width:98.5%;height:35px;margin-top:50rpx;}
 .adds .l{display: block;width:30%;float:left;height:100%;line-height: 35px;font-size:13px;color:#999;padding:0 10px}
 .adds .r{display: block;float:right;width:40%;height:100%;text-align:right;margin-right:10px}
 .weui-input{line-height: 39px;font-size:13px}

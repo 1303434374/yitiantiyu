@@ -162,7 +162,7 @@ Page({
     var _imgArray = t.data._imgArray
     var t = this,
       n = 3 - _imgArray.length;
-    n > 0 && n <= 3 ? wx.chooseImage({
+    n > 0 && n <= 9 ? wx.chooseImage({
       count: n,
       sizeType: ["compressed"],
       sourceType: ["album", "camera"],
