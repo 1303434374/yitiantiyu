@@ -65,10 +65,13 @@
                   <view class="l">
                        <image src="{{item.avatar}}" /> 
                        <text>{{item.nick}}</text>
+                       <i>{{item.time}}</i>
                   </view>
-                  <view class="r"> {{item.time}}</view>
+                  <view class="r"> 
+                        <view class="tig" bindtap='edits' data-id="{{item.id}}">编辑</view> 
+                  </view>
                </view>
-               <!-- <view class="title">{{item.title}}</view> -->
+                <view class="title">{{item.title}}</view> 
                <view class="content">{{item.content}}</view>
                <view class="image">
                     <block wx:if="{{item.image !=''}}">
