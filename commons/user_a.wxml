@@ -1,4 +1,4 @@
-<view class="tab-content">
+<!--<view class="tab-content">
    <view wx:for="{{fabu}}" wx:key="*this" wx:fot-item="item">
         <li>
                <view class="tops">
@@ -8,7 +8,7 @@
                        <i>{{item.time}}</i>
                   </view>
                   <view class="r"> 
-                        <!-- <view class="tig">编辑</view> -->
+                        <view class="tig">编辑</view> 
                         <view class="tig" bindtap='edits' data-id="{{item.id}}"></view>
                   </view>
                </view>
@@ -35,7 +35,7 @@
                             </view>
                              <view wx:else >
                                 <video id="index{{ index }}" id="myVideo" data-id="{{item.id}}" bindplay="bindplay" bindended='bindended' src="{{url}}{{sitem}}"  objectFit="cover" direction="0" poster="{{url}}{{item.topimg}}"></video>
-                               <!-- <image class="uploadimg"  mode="aspectFill" src="../../image/add_plus[old].png"></image> -->
+                              <image class="uploadimg"  mode="aspectFill" src="../../image/add_plus[old].png"></image>
                               </view>
                        </block>
                     </block>
@@ -55,4 +55,103 @@
            </li>
    </view>
    <view class="ajax_onload" bindtap="moress">—— {{jiazai}} ——</view>
-</view>
+</view>-->
+
+  <view class="tab-content" >
+      <view wx:for="{{fabu}}" wx:key="*this" wx:fot-item="item">
+      <li data-id="{{item.id}}">
+           <!-- <li bindtap="views" data-id="{{item.id}}"> -->
+               <view class="top">
+                  <view class="l">
+                       <image src="{{item.avatar}}" /> 
+                       <text>{{item.nick}}</text>
+                  </view>
+                  <view class="r"> {{item.time}}</view>
+               </view>
+               <!-- <view class="title">{{item.title}}</view> -->
+               <view class="content">{{item.content}}</view>
+               <view class="image">
+                    <block wx:if="{{item.image !=''}}">
+                            <block wx:for="{{item.image}}" wx:key="*this" wx:for-item="vitem">
+                               <block wx:if="{{item.image.length == 1}}">
+                                    <view class="one_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                               <block wx:if="{{item.image.length == 2}}">
+                                    <view class="two_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                               <block wx:if="{{item.image.length == 3}}">
+                                    <view class="three_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                                <block wx:if="{{item.image.length == 4}}">
+                                    <view class="four_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                               </block>
+                               <block wx:if="{{item.image.length == 5}}">
+                                    <view class="five_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                                    <block wx:if="{{item.image.length == 6}}">
+                                    <view class="six_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                                     <block wx:if="{{item.image.length == 7}}">
+                                    <view class="sev_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                                    <block wx:if="{{item.image.length == 8}}">
+                                    <view class="eig_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                                     <block wx:if="{{item.image.length == 9}}">
+                                    <view class="nie_pic"><image src="{{url}}{{vitem}}" bindtap='previewImg' data-id="{{item.id}}" data-inde='{{index}}' data-currentimg="{{url}}{{vitem}}"></image></view>
+                                     </block>
+                              
+                            </block>
+                    </block>
+                    <block wx:if="{{item.video !='' && item.image == ''}}">
+                       <block wx:for="{{item.video}}" wx:key="key" wx:for-item="sitem">
+                           <!-- <view class="one_video" style="display:{{is_hidden == 0 ? 'none':'block'}}" >
+                               <block wx:if="{{is_video == 0}}">
+                                  <image src="../../image/add_plus.png" class="uploadimg" data-id="{{item.id}}" bindtap="videoPlay" id="myVideo" />
+                               </block>
+                               <block wx:else>
+                                      <video class='uploadimg'  wx:if="{{curr_id == item.id}}"  bindplay="bindplay"  bindended='bindended' src="{{url}}{{sitem}}" style="display:{{is_hidden == 0 ? 'none':'block'}}" controls  objectFit="cover">
+                                 </video>
+                               </block>
+                           </view> -->
+                            <view wx:if="{{curr_id != item.id}}" class="topimg" data-id="{{item.id}}" bindtap="videoPlay" >
+                                <image src="{{url}}{{item.topimg}}" class="uploadimg" mode="aspectFill" />
+                                <image src="/image/play.png" class="play" />
+                            </view>
+                            <block wx:else>
+                                    <!--<video class='uploadimg'  wx:if="{{curr_id == item.id}}"  bindplay="bindplay"  bindended='bindended' src="{{url}}{{sitem}}" style="display:{{is_hidden == 0 ? 'none':'block'}}" controls  objectFit="cover">
+                                </video>-->
+                                <video data-id="{{item.id}}" autoplay="true" bindplay="bindplay" bindended='bindended' src="{{url}}{{sitem}}"  objectFit="cover" direction="0"></video>
+                            </block>
+                           
+                            <!--<view class="uploadimg" data-id="{{item.id}}" style="display:{{is_hidden == 0 ? 'none':'block'}}" wx:if="{{curr_id == item.id}}">
+                              <video id="index{{ index }}" id="myVideo" data-id="{{item.id}}" bindplay="bindplay" bindended='bindended' src="{{url}}{{sitem}}"  objectFit="cover" direction="0" autoplay='true'  poster="{{url}}{{item.topimg}}"></video>
+                            </view>
+                             <view wx:else >
+                                <video id="index{{ index }}" id="myVideo" data-id="{{item.id}}" bindplay="bindplay" bindended='bindended' src="{{url}}{{sitem}}"  objectFit="cover" direction="0" poster="{{url}}{{item.topimg}}"></video>
+                                <image class="uploadimg"  mode="aspectFill" src="../../image/add_plus[old].png"></image> 
+                              </view>-->
+                       </block>
+                    </block>
+               </view>
+               <view class="bott">
+                     <label>
+                        <image src="../../image/eyes.png" /> <i>{{item.is_eye}}</i>
+                     </label>
+                     <label  bindtap="views" data-id="{{item.id}}">
+                        <image src="../../image/xiaoxi.png"/> <i>{{item.is_ping}}</i>
+                     </label>
+                      <label bindtap="zans" data-id="{{item.id}}">
+                      <!-- <block wx:if="{{item.zan_type == 0}}">
+                       <image src="../../image/zan.png" bindtap="zans" data-id="{{item.id}}" /> <i>{{item.is_zan}}</i>
+                       </block>
+                       <block wx:else> -->
+                       <image src="../../image/zan.png"/> <i>{{item.is_zan}}</i>
+                       <!-- </block> -->
+                      </label>
+               </view>
+               <view class="d"></view>
+           </li>
+        </view>
+        <view class="ajax_onload">—— {{jiazai}} ——</view>
+   </view>

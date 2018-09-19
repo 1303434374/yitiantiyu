@@ -18,5 +18,5 @@
                 </li> 
 
    </view>
- <view class="ajax_onload" bindtap="morese">—— {{jiazaitt}} ——</view>
+ <view class="ajax_onload">—— {{jiazaitt}} ——</view>
 </view>

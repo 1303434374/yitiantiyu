@@ -9,7 +9,10 @@ Page({
    */
   data: {
      list:'',
+     lists:'',
+     hid:true,
      cateid:'',
+     search: ''
      //tuid:''
   },
 
@@ -26,7 +29,8 @@ Page({
            method: 'post',
            success: function (e) {
              page.setData({
-               list: e.data.list
+               list: e.data.list,
+               lists: e.data.list
              })
            }
          })
@@ -35,7 +39,63 @@ Page({
          })
        //  this.joinsu();
   },
+  //搜索
+  clickon:function(e){
+    var content = this.data.list;
+    var val = e.detail.value;
+    this.search(e.detail.value)
+    console.log(this.data.list)
+    this.setData({
+        search: e.detail.value
+    })
+  },
+  reset: function (event) {
+    if (event.detail.value && !this.data.hid) {
+      this.setData({
+        search: '',
+        hid: true 
+      })
+    }
+  },
+  search: function (key) {//搜索方法 key 用户输入的查询字段
+    var This = this;
 
+    var content = this.data.list;
+    var key = key;
+      if (key == "") {//用户没有输入 全部显示
+        This.setData({
+          list: this.data.lists
+        })
+        return;
+      }
+    var list = this.data.list;
+    var arr = [];//临时数组 用于存放匹配到的数据
+    var array = [];
+    list.forEach((value, index, array) => {
+      if (value.title.indexOf(key) != -1) {
+        arr.push(value.title);
+        console.log(arr)
+      }
+    })
+    if(arr != ''){
+      for (var i = 0; i < content.length; i++) {
+        for (var j = 0; j < arr.length; j++) {
+          if (content[i].title == arr[j]) {
+            array.push(content[i])
+            console.log(array)
+          }
+        }
+      }
+      This.setData({
+        list: array,
+        hid:true
+      })
+    }else{
+      This.setData({
+        hid: false
+      })
+    }
+  },
   // joinsu:function(){
   //     var page = this;
   //     var uid = wx.getStorageSync('userInfo').uid

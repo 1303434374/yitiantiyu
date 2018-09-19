@@ -17,5 +17,5 @@
                <view class="d"></view>
            </li>
   </view>
-   <view class="ajax_onload" bindtap="moresss">—— {{jiazait}} ——</view>
+   <view class="ajax_onload">—— {{jiazait}} ——</view>
 </view>

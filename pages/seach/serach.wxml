@@ -1,7 +1,12 @@
 <view class="shetuan">
+  <view class='search'>
+  <input placeholder="搜索社团" placeholder-style="placeholder" bindinput='clickon' bindblur='reset' value='{{search}}' />
+  <image src="/image/search.png" />
+</view>
     <view class="center">
+    <view class='flex {{hid ? "hid" : ""}}'>暂无数据！</view>
              <block wx:if="{{list !=''}}">
-             <scroll-view scroll-y='true' bindscrolltolower='lower'>
+             <scroll-view scroll-y='true' bindscrolltolower='lower' class="{{hid ? '' : 'hid'}}">
                <block wx:for="{{list}}" wx:key="*this" wx:for-item="item">
                 <li>
                      <view class="top"> 
@@ -20,7 +25,7 @@
                     </view>
                 </li>
                 </block>
-                </scroll-view>
+              </scroll-view>
               </block>
               <block wx:else>
                     <view class="no"> #暂未搜索到社团信息# </view>
